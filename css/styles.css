@@ -1,0 +1,239 @@
+/* ============================
+    Custom styling resets 
+============================ */
+ul {
+    padding-left: 0;  
+}
+body {
+    max-width: 950px;
+    min-width: 320px; 
+    margin: 0 auto;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+figure {
+    margin: 0;
+}
+
+/* ============================
+    Mobile-1st base CSS 
+============================ */
+
+/* General styling */
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', 'Open Sans', 'Hind Modurai', Verdana;
+    font-weight: 400;
+    color: rgba(26, 26, 26, 0.76);
+}
+body {
+    text-align: center;
+}
+h1 {
+    margin: 0 auto 2rem;
+    padding-top: 1rem;
+    text-transform: capitalize;
+    font-weight: bolder;
+}
+h1,
+h2,
+h3 {
+    text-transform: capitalize;
+}
+header {
+    padding: 1rem 0;
+    background-color: antiquewhite;
+}
+nav {
+    margin: .5rem;
+}
+
+/* Header styling */
+#top {
+    font-size: xx-large;
+    font-weight: 900;
+}
+.top-nav-list-item {
+    margin: 1rem .5rem;
+}
+.top-nav-link {
+    display: block;
+    padding: 1rem;
+    background-color: white;
+    color: inherit;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+.about {
+    margin: .5rem;
+}
+.about-picture {
+    max-width: calc(100% - 1rem);
+    padding: 2rem 0;
+}
+.about-caption {
+    margin: 0 .5rem;
+}
+
+/* Main styling */
+figcaption h3 {
+    font-weight: 500;
+}
+.boxes img {
+    max-width: 100%;
+    margin: auto;
+}
+.boxes {
+    margin: 0 .5rem 2rem;
+}
+#portfolio {
+    padding: 3rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: medium;
+}
+
+/* Footer styling */
+footer {
+    background-color: antiquewhite;
+    padding: .5rem;
+}
+.contact-section {
+    padding: 1rem 0;
+}
+.contact-section h2 {
+    text-transform: uppercase;
+    font-size: large;
+    font-weight: 900;
+}
+.bottom-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    padding: 2rem 0;
+    border-top: 1px dotted rgba(70, 68, 68, .1);
+}
+.bottom-nav h2 {
+    text-transform: none;
+    font-weight: 900;
+}
+.bottom-nav h2, .bottom-nav ul {
+    margin: 0;
+    font-size: medium;
+}
+.contact-phone, .contact-email {
+    text-transform: capitalize;
+}
+.contact-details {
+    text-transform: none;
+    font-weight: 600;
+}
+.mobile-bottom-nav-link {
+    text-transform: uppercase;
+    font-weight: 900;
+}
+.non-mobile-nav-link {
+    display: none;
+}
+/* ============================
+    Media Queries
+============================ */
+
+/*  Tablet Screens   */
+@media screen and (min-width: 768px) {
+
+    /*  Header styles */
+    h1, nav, ul {
+        margin: 0;
+    }
+    li {
+        display: inline-block;
+    }
+    .top-nav-link {
+        background-color: inherit;
+    }
+    .about figure {
+        display: flex;
+        flex-direction: row-reverse;
+        padding: 1rem .5rem 3rem;
+        text-align: start;
+        font-family: 'Hind Modurai';
+        font-size: large;
+    }
+    .about-picture {
+        max-width: calc(50% - 1rem);
+        padding: 0;
+    }
+    /*  Main styles */
+    .portfolio-figures {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .boxes {
+        flex-basis: calc(50% - 1rem)
+    }
+
+    /*  Footer styles  */
+    #contact p {
+        margin: 2rem 10rem;
+    }
+    .bottom-nav {
+        justify-content: space-between;
+    }
+    .bottom-nav h2 {
+        flex-grow: 1;
+        text-align: left;
+    }
+    .bottom-nav ul {
+        display: flex;
+        justify-content: space-between;
+        flex-grow: .5;
+        text-transform: uppercase;
+    }
+    .bottom-nav ul li{
+        display: block;
+    }
+    .non-mobile-nav-link {
+        display: inline-block;
+        font-weight: 900;
+    }
+    .mobile-bottom-nav-link {
+        display: none;
+    }
+
+/*  Desktop screens  */
+    @media screen and (min-width: 1024px) {
+        body {
+            background-color: antiquewhite;
+        }
+        header {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        h1,
+        nav,
+        .about-picture {
+            padding-left: 1rem;
+        }
+        .about-caption {
+            padding-right: 4rem;
+        }
+        main {
+            background-color: white;
+            padding: 0 2rem;
+        }
+        .boxes {
+            flex-basis: calc(33.333% - 1rem)
+        }
+        /*  Footer styles  */
+        #contact p {
+            padding: 0 6rem;
+        }
+    }
+}  
