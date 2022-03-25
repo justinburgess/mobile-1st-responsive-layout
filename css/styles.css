@@ -41,7 +41,8 @@ h1 {
 }
 h1,
 h2,
-h3 {
+h3,
+h4 {
     text-transform: capitalize;
 }
 header {
@@ -80,8 +81,8 @@ nav {
 }
 
 /* Main styling */
-figcaption h3 {
-    font-weight: 500;
+figcaption h3, .boxes h3{
+    font-weight: 600;
 }
 .boxes img {
     max-width: 100%;
@@ -90,7 +91,36 @@ figcaption h3 {
 .boxes {
     margin: 0 .5rem 2rem;
 }
-#portfolio {
+.cert:hover,
+.cert:active,
+.college-logo:hover,
+.college-logo:active {
+    text-decoration: inherit;
+    transform: scale(1.1);
+    transition: 0.3s;
+    text-align: center;
+    color: inherit;
+}
+.college {
+    text-decoration: underline;
+}
+.college-logo {
+    width: 300px;
+}
+#edu, #certifications {
+    text-decoration: underline;
+}
+.education p {
+    font-family: 'Hind Modurai', Verdana;
+    font-size: medium;
+}
+.education h4,
+.cert-list,
+#certifications {
+    font-weight: 500;
+    padding-top: 2rem;
+}
+#portfolio, #credentials {
     padding: 3rem;
     text-transform: uppercase;
     font-weight: 900;
@@ -169,14 +199,17 @@ footer {
         padding: 0;
     }
     /*  Main styles */
-    .portfolio-figures {
+    .portfolio-figures, .certs {
         display: flex;
         flex-wrap: wrap;
     }
     .boxes {
         flex-basis: calc(50% - 1rem)
     }
-
+    .cert {
+        align-self: baseline;
+    }
+    
     /*  Footer styles  */
     #contact p {
         margin: 2rem 10rem;
@@ -226,8 +259,14 @@ footer {
             padding-right: 4rem;
         }
         main {
-            background-color: white;
             padding: 0 2rem;
+        }
+        .portfolio-section {
+            background-color: white;
+        }
+        .credentials-section {
+            margin-top: 1rem;
+            background-color: white;
         }
         .boxes {
             flex-basis: calc(33.333% - 1rem)
