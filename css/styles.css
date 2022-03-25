@@ -262,6 +262,7 @@ footer {
 
 /*  Desktop screens  */
     @media screen and (min-width: 1024px) {
+        
         /*  General Styles  */
         body {
             max-width: 950px;
