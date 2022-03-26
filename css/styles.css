@@ -201,6 +201,11 @@ footer {
     .top-nav ul {
         padding: 0;
     }
+    #top {
+        padding-top: 2rem;
+    }
+    
+    /*  Main styles */
     .about {
         padding: 0 1rem;
         background-color: antiquewhite;
@@ -217,10 +222,6 @@ footer {
         max-width: calc(50% - 1rem);
         padding: 0;
     }
-    #top {
-        padding-top: 2rem;
-    }
-    /*  Main styles */
     .portfolio-figures, .certs {
         display: flex;
         flex-wrap: wrap;
